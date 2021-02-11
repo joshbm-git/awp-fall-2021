@@ -3,6 +3,7 @@ import ButtonExample from "./ButtonExample";
 import InputTextExample from "./InputTextExample";
 import HelloExample from "./HelloExample";
 import NameListExample from "./NameListExample";
+import NameListExample2 from "./NameListExample2";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <InputTextExample />
 
       <NameListExample names={["Kristian", "Jes", "Mads", "Torill"]} />
+      <NameListExample2 names={["Kristian", "Jes", "Mads", "Torill"]} />
     </>
   );
 }
