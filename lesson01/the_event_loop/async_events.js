@@ -13,6 +13,8 @@ function baz(input) {
 // Can you guess the order of the output in the console?
 // Do they _always_ output in the same order when you try it?
 
+const test = "Hello there";
+
 baz("Before setTimeout");
 setTimeout(() => bar("hello later"), 501);
 setTimeout(() => foo("first foo"), 1000);
