@@ -8,7 +8,7 @@ function App() {
   useEffect(() => { 
     const fetchData = async () => {
       // Just some example data from a public and open API
-      const url = "https://jsonplaceholder.typicode.com/todos/5";
+      const url = "https://api.chucknorris.io/jokes/random";
       const response = await fetch(url);
       const data = await response.json();
       setData(data);
@@ -25,7 +25,7 @@ function App() {
       <ExampleEffect></ExampleEffect>
 
       <h3>Data from API:</h3>
-      <p>{data.title}</p>
+      <p>{data.value}</p>
     </div>
   );
 }
