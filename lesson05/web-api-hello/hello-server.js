@@ -1,10 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require('cors');
 
 const app = express();
-const port = 8080;
+const port = 8081;
 
 app.use(bodyParser.json());
+
+// Why would you need this?
+// https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+app.use(cors());
 
 app.get("/api/", (req, res) => {
   res.json({ msg: "Hello, World!" });
