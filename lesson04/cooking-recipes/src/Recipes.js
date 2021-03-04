@@ -1,7 +1,8 @@
 import { Link } from "@reach/router";
+import AddRecipe from "./AddRecipe";
 
 function Recipes(props) {
-  const { data } = props;
+  const { data, addRecipe } = props;
 
   return (
     <>
@@ -13,6 +14,8 @@ function Recipes(props) {
           </li> )
         }
       </ol>
+
+      <AddRecipe addRecipe={addRecipe}/>
     </>
   );
 }
