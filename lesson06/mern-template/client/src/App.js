@@ -4,21 +4,16 @@ import { Router } from "@reach/router";
 import Recipes from "./Recipes";
 import Recipe from "./Recipe";
 
-/*
-const data = [
-  { id: 1, title: 'Pizza 1', description: "Pizza is nice 1" },
-  { id: 2, title: 'Pizza 2', description: "Pizza is nice 2" },
-  { id: 3, title: 'Pizza 3', description: "Pizza is nice 3" },
-];
-*/
+const API_URL = process.env.REACT_APP_API;
 
 function App() {
-  //const [recipes, setRecipes] = useState(data);
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => { 
     const fetchData = async () => {
-      const url = "http://localhost:8081/api/cooking";
+      //const url = "http://localhost:8081/api/cooking";
+      const url = `${API_URL}/cooking`;
+
       const response = await fetch(url);
       const data = await response.json();
       setRecipes(data);
@@ -39,7 +34,9 @@ function App() {
       ingredients: ingredients    
     };
     const postData = async () => {
-      const url = "http://localhost:8081/api/cooking";
+      //const url = "http://localhost:8081/api/cooking";
+      const url = `${API_URL}/cooking`;
+
       const response = await fetch(url, {
         method: 'POST',
         headers: {
