@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import AuthService from "./AuthService";
 
+import Login from "./Login";
+
 const API_URL = "http://localhost:8080/api";
 
 const authService = new AuthService(`${API_URL}/users/authenticate`);
@@ -22,31 +24,41 @@ function App() {
   }, [postCount]); // Refresh data whenever postCount is increased
 
   // Login using API
-  useEffect(() => {
-    async function login(username, password) {
-      try {
-        const resp = await authService.login(username, password);
-        console.log("Authentication:", resp.msg);
-      } catch (e) {
-        console.log("Login", e);
-      }
+  async function login(username, password) {
+    try {
+      const resp = await authService.login(username, password);
+      console.log("Authentication:", resp.msg);
+      setPostCount(p => p + 1);
+    } catch (e) {
+      console.log("Login", e);
     }
+  }
+
+  /*
+  useEffect(() => {
     if (!authService.loggedIn()) {
       login("krdo", "123").then(() => {
         setPostCount(p => p + 1); // Refresh data after login
       })
     }
   }, []); // Only try login at first page render
+  */
 
   let contents = <p>No kittens!</p>;
   if (kittens.length > 0) {
     contents =< ol>{kittens.map(kitten => <li key={kitten.id}>{kitten.name}</li>)}</ol>;
   }
 
+  let loginPart = <Login login={login}></Login>;
+  if (authService.loggedIn()) {
+    loginPart = "Logged in!";
+  }
+
   return (
     <>
       <h1>Kittens</h1>
       {contents}
+      {loginPart}
     </>
   );
 }
