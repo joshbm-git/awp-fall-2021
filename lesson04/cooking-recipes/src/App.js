@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => { 
     const fetchData = async () => {
-      const url = "http://localhost:8081/api/cooking";
+      const url = "http://localhost:8080/api/cooking";
       const response = await fetch(url);
       const data = await response.json();
       setRecipes(data);

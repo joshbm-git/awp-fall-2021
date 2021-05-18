@@ -7,7 +7,6 @@
 
 // Libraries
 const express = require("express");
-const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const cors = require("cors");
 const checkJwt = require("express-jwt"); // Validates access tokens automatically
