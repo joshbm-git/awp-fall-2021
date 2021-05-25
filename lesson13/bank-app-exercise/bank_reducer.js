@@ -1,12 +1,10 @@
-function reducer(state = 0, action) {
+function reducer(state = { amount: 0 }, action) {
     switch (action.type) {
         case 'DEPOSIT': {
-            // TODO: return new state
-            return state;
+            return state + action.amount;
         }
         case 'WITHDRAW': {
-            // TODO: return new state
-            return state;
+           return state - action.amount;
         }
         default:
             return state
