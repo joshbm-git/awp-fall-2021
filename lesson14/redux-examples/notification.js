@@ -1,5 +1,4 @@
 const { createStore, applyMiddleware } = require("redux");
-const thunk = require("redux-thunk").default;
 
 // Logging middleware for the store
 const logger = store => next => action => {
@@ -26,7 +25,7 @@ let reducer = function (state = [], action) {
 };
 
 // Creating the store
-const store = createStore(reducer, applyMiddleware(logger, thunk));
+const store = createStore(reducer, applyMiddleware(logger));
 
 // Let's dispatch an action
 store.dispatch({ type: "SHOW", text: "Hello there", id: 42 });
