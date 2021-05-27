@@ -15,7 +15,7 @@ function Kittens(props) {
 
   return (
     <>
-      <h1>Kittens (local)</h1>
+      <h1>Kittens</h1>
       <ol>
         {props.kittens.map(kitten =>
           <li key={kitten._id}>
