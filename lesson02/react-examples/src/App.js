@@ -7,19 +7,20 @@ import NameListExample2 from "./NameListExample2";
 
 function App() {
   return (
-    <>
+    <main>
+      <h2>HelloExample</h2>
       <HelloExample justAName="fellow programmer" />
 
+      <h2>ButtonExample</h2>
       <ButtonExample />
 
-      <br />
-      <br />
-
+      <h2>InputTextExample</h2>
       <InputTextExample />
 
-      <NameListExample names={["Kristian", "Jes", "Mads", "Torill"]} />
-      <NameListExample2 names={["Kristian", "Jes", "Mads", "Torill"]} />
-    </>
+      <h2>NameListExample</h2>
+      <NameListExample names={["Jes", "Dan", "Martin"]} />
+      <NameListExample2 names={["Jes", "Dan", "Martin"]} />
+    </main>
   );
 }
 
