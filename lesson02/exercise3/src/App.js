@@ -7,14 +7,21 @@ function App() {
   const input = [2, 2, 2, 2, 12];
 
   return (
-    <div className="App">
-      <h1>My app!</h1>
+    <main>
+      <h1>The Math App™</h1>
 
+      <h2>Add Number</h2>
       <AddNumber />
+
+      <h2>Add Two Numbers</h2>
       <AddTwoNumbers num1={2} num2={4} />
+
+      <h2>Sum Of Numbers</h2>
       <SumOfNumbers array={input} />
+
+      <h2>List Of Numbers</h2>
       <ListOfNumbers array={input} />
-    </div>
+    </main>
   );
 }
 

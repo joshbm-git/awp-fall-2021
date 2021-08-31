@@ -18,11 +18,11 @@ function AddNumber(props) {
       <button
         type="button"
         onClick={(event) => {
-          setSum(sum + parseInt(input))
+          setSum(sum + parseInt(input));
         }}>
-          Add number
+        Add number
       </button>
-      <p>{sum}</p>
+      <p>Sum: {sum}</p>
     </>
   );
 }

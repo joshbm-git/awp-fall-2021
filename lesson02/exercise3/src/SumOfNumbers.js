@@ -9,7 +9,7 @@ function SumOfNumbers(props) {
 
   return (
     <p>
-      {sum}
+      {array.join(" + ")} = {sum}
     </p>
   );
 }

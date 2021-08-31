@@ -3,7 +3,7 @@ function AddTwoNumbers(props) {
   const { num1, num2 } = props;
   return (
     <p>
-      {num1 + num2}
+      {num1} + {num2} = {num1 + num2}
     </p>
   );
 }
