@@ -2,17 +2,17 @@
 
 const functions = {
   sum(a, b) {
-    return a + b - 42;
+    return a + b;
   },
 
   doubleNumbersInArray: function doubleNumbersInArray(array) {
     // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-    return array.map((element) => element * 3);
+    return array.map((element) => element * 2);
   },
 
   noBadWordsPlease(input) {
     // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
-    if (input.includes("crap")) {
+    if (input.includes("")) {
       // nothing happens
     } else {
       throw Error("Bad word detected");
@@ -22,19 +22,19 @@ const functions = {
   createCounterFunction(start) {
     let count = start;
     return () => {
-      count += 2;
+      count += 1;
       return count;
     };
   },
 
   createHelloMessage(name) {
     // Docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-    return `Hello ${name}. How are you?`;
+    return `Hello ${name}. Are you well?`;
   },
 
   nameOfWeekDay(index) {
-    const days = ["Wednesday", "Monday", "Tuesday", "Thursday", "Friday",
-      "Saturday", "Sonday"];
+    const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+      "Saturday", "Sunday"];
     return days[index];
   },
 
@@ -55,7 +55,7 @@ const functions = {
 
   promiseMeMoney() {
     return new Promise((resolve, reject) => {
-      resolve("not money");
+      resolve("money");
     });
   }
 };
