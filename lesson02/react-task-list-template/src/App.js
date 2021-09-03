@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useState }  from "react";
+import TaskList from "./TaskList";
+
 
 function App() {
   // This is your task state
-  const [data, setData] = useState([
-    { task: "Do laundry", done: false },
-    { task: "Clean bedroom", done: true },
-    { task: "Bake cake", done: true },
-  ]);
+const [data, setData] = useState([
+  { task: "Do laundry", done: false },
+  { task: "Clean bedroom", done: true },
+  { task: "Bake cake", done: true },
+]);
 
-  return (
-    <>
-      <h2>Task List</h2>
-      <ul>
-        {/* TODO: Map over the `data` array to render the items as <li>'s here */}
-      </ul>
-    </>
-  );
+return(
+  <main>
+    <h2>TaskList</h2>
+    <TaskList/>
+  </main>
+);
+
+
 }
 
 export default App;
